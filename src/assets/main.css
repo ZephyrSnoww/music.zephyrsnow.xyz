@@ -1,0 +1,66 @@
+/* Set root variables */
+:root {
+  --blue: #1283E5;
+  --green: #34E578;
+  --yellow: #E9C46A;
+  --red: #E76F51;
+
+  --background: #151617;
+  --text: #eeeeee;
+}
+
+/* Set styles for everything */
+* {
+  box-sizing: border-box; /* Make elements padding/margin/border not affect their actual size */
+  margin: 0; /* Remove any default margin sizes */
+  position: relative; /* Make all absolute elements positioned relative to their parent */
+
+  /* The following removes scrollbars */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Remove scrollbars even harder */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Body styling */
+body {
+  /* Set size to the entire screen */
+  height: 100vh;
+  width: 100vw;
+
+  /* Set default colors */
+  color: var(--text);
+  background: var(--background);
+
+  /* Set text styles */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+
+  /* Text rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App container styling */
+#app {
+  /* Set size to the entire screen */
+  width: 100%;
+  height: 100%;
+
+  /* No overflow */
+  overflow: hidden;
+
+  /* Set rows/columns for layout */
+  grid-template-columns: 15% auto;
+  grid-template-rows: auto 12%;
+
+  grid-template-areas:
+    "left   main"
+    "bottom bottom";
+
+  display: grid;
+}
