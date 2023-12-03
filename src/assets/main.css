@@ -37,7 +37,7 @@ body {
 
   /* Set text styles */
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 
   /* Text rendering */
   text-rendering: optimizeLegibility;
@@ -48,15 +48,15 @@ body {
 /* App container styling */
 #app {
   /* Set size to the entire screen */
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   /* No overflow */
   overflow: hidden;
 
   /* Set rows/columns for layout */
   grid-template-columns: 15% auto;
-  grid-template-rows: auto 12%;
+  grid-template-rows: auto 11%;
 
   grid-template-areas:
     "left   main"
@@ -68,4 +68,63 @@ body {
 /* Icons */
 .icon {
   font-family: "Material Icons";
+}
+
+/* Input styling */
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: unset;
+  font-family: unset;
+
+  background-color: var(--text);
+  color: var(--background);
+
+  border-radius: 5px;
+  padding: 0.1em 0.25em;
+
+  box-shadow: -2px 2px 0px var(--blue);
+
+  transition: 0.25s ease;
+}
+
+input:focus {
+  box-shadow: -5px 5px 0px var(--blue);
+}
+
+/* Button styling */
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: unset;
+  font-family: unset;
+
+  background-color: var(--blue);
+  color: var(--background);
+
+  border-radius: 5px;
+  padding: 0.1em 1em;
+
+  cursor: pointer;
+  filter: brightness(0.8);
+
+  transition: 0.25s ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+/* Link styling */
+a {
+  color: var(--blue);
+  text-decoration: none;
+  filter: brightness(0.7);
+  transition: 0.25s ease;
+}
+
+a:hover {
+  filter: brightness(1);
 }
