@@ -19,3 +19,16 @@ export async function navidromeRequest (path, params) {
     });
   })
 }
+
+export function toTime (duration) {
+  duration = Math.floor(duration);
+
+  let seconds = duration % 60;
+  let minutes = (duration - seconds) / 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
