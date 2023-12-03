@@ -64,3 +64,8 @@ body {
 
   display: grid;
 }
+
+/* Icons */
+.icon {
+  font-family: "Material Icons";
+}
