@@ -42,6 +42,7 @@ function selectSong (song) {
         <div>Album</div>
         <div>Duration</div>
         <div>Bitrate</div>
+        <div>Liked</div>
       </div>
 
       <div class="playlist-entry" v-for="entry in localState.playlist.entry">
@@ -56,6 +57,9 @@ function selectSong (song) {
         <RouterLink :to="`/album/${entry['@_albumId']}`">{{ entry['@_album'] }}</RouterLink>
         <div>{{ toTime(entry['@_duration']) }}</div>
         <div>{{ entry['@_bitRate'] }}</div>
+        <div class="icon" :style="{
+          color: entry['@_starred'] ? 'var(--blue)' : ''
+        }">{{ entry['@_starred'] ? 'favorite' : 'favorite_outline' }}</div>
       </div>
     </div>
   </div>
@@ -90,7 +94,7 @@ a {
 
 .playlist-entry {
   display: grid;
-  grid-template-columns: auto 25% 7% 7%;
+  grid-template-columns: auto 25% 7% 7% 5%;
   gap: 0.5em;
   padding: 0.5em 1em;
   background-color: var(--background);
