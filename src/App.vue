@@ -46,9 +46,34 @@ if (localStorage.getItem('loggedIn') == 'true') {
 
 const tabs = [
   {
-    'icon': '',
+    'icon': 'search',
+    'text': 'Search',
+    'link': '/search'
+  },
+  {
+    'icon': 'library_music',
+    'text': 'Songs',
+    'link': '/songs'
+  },
+  {
+    'icon': 'album',
+    'text': 'Albums',
+    'link': '/albums'
+  },
+  {
+    'icon': 'favorite',
+    'text': 'Favorites',
+    'link': '/favorites'
+  },
+  {
+    'icon': 'folder',
     'text': 'Playlists',
     'link': '/playlists'
+  },
+  {
+    'icon': 'settings',
+    'text': 'Settings',
+    'link': '/settings'
   }
 ];
 
@@ -217,6 +242,22 @@ function toggleLike () {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-areas: "tabs" "playlists";
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  overflow-y: scroll;
+}
+
+.tab {
+  padding: 0.25em 0.5em;
+  display: flex;
+  gap: 0.33em;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.25em;
 }
 
 .playlists-container {
